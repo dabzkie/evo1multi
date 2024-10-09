@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <title>EVO1 Construction Services</title>
+    <link rel="icon" type="image/x-icon" href="evoicon.png">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body id="top">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#top"><img src="images/logo2.png" alt="Evo1 Construction"></a>
+        </div>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="contacts.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <h2>PREVIOUS PROJECTS</h2>
+        <div class="project-item">
+            <a href="#" class="project-link" data-image="images/asian.jpg">
+                <img src="images/asian.jpg" alt="Project 1">
+            </a>
+            <h3>Asian Hospital & Medical Center</h3>
+            <p>Scope: Polycarbonate Canopy roofing</p>
+        </div>
+        <div class="project-item">
+            <a href="#" class="project-link" data-image="images/BEResidences.jpg">
+                <img src="images/BEResidences.jpg" alt="Project 2">
+            </a>
+            <h3>BE Residences</h3>
+            <p>Scope: Office Fit-Out</p>
+        </div>
+        <div class="project-item">
+            <a href="#" class="project-link" data-image="images/hilti-2.jpg">
+                <img src="images/hilti-2.jpg" alt="Project 3">
+            </a>
+            <h3>Hilti Tools and Services</h3>
+            <p>Scope: Warehouse Renovation</p>
+        </div>
+        <div class="project-item">
+            <a href="#" class="project-link" data-image="images/ifuel.jpg">
+                <img src="images/ifuel.jpg" alt="Project 4">
+            </a>
+            <h3>iFuel Tanza Cavite</h3>
+            <p>Scope: Aluminum Composite Panel Supply & Installation</p>
+        </div>
+        <div class="project-item">
+            <a href="#" class="project-link" data-image="images/psbank.jpg">
+                <img src="images/psbank.jpg" alt="Project 5">
+            </a>
+            <h3>PS Bank</h3>
+            <p>Scope: Aluminum Composite Panel Supply & Installation</p>
+        </div>
+        <div class="project-item">
+            <a href="#" class="project-link" data-image="images/canva.jpg">
+                <img src="images/canva.jpg" alt="Project 6">
+            </a>
+            <h3>Canva</h3>
+            <p>Scope: Motorized Pergola</p>
+        </div>
+        <div class="project-item">
+            <a href="#" class="project-link" data-image="images/delasalle.jpg">
+                <img src="images/delasalle.jpg" alt="Project 7">
+            </a>
+            <h3>De Lasalle University</h3>
+            <p>Scope: Aluminum Composite Panel Installation</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+    
+    <!-- Modal Structure -->
+    <div class="modal" id="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("modal");
+
+        // Get the image and insert it inside the modal
+        var modalImg = document.getElementById("modal-image");
+        var projectLinks = document.querySelectorAll('.project-link');
+
+        projectLinks.forEach(link => {
+            link.onclick = function(e) {
+                e.preventDefault();
+                var imgSrc = this.getAttribute('data-image');
+                modal.style.display = "block";
+                modalImg.src = imgSrc;
+            }
+        });
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- Contact Section -->
+            <section class="contact" id="contact">
+                <h2>Contact Us</h2>
+                <div class="contact-container">
+                    <!-- Left Column: Contact Details -->
+                    <div class="contact-details">
+                        <h3>Our Contact Details</h3>
+                        <p><strong>Mobile:</strong> 09176704118 <b>|</b> 09176790411</p>
+                        <p><strong>Email:</strong> evo1architectural@gmail.com</p>
+                        <p><strong>Location:</strong> 9 2nd Street Paliparan Subd. Sto. Niño, Marikina City Philippines</p>
+                        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/evo1construction" target="_blank">EVO1 Construction Services</a></p>
+                    </div>
+            
+                    <!-- Right Column: Contact Form -->
+                    <div class="contact-form">
+                        <form action="https://formspree.io/f/xyzygdnb" method="POST">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" placeholder="Message Details" required></textarea>
+            
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EVO1 Construction Services. All Rights Reserved.</p>
+        <p> <b>Email:</b> evo1architectural@gmail.com | <b>Customer Support:</b> 0969-233-3395 | <b>Facebook:</b> EVO1 Construction Services</p>
+    </footer>
+</body>
+
+</html>
